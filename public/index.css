@@ -1,0 +1,294 @@
+/* -----------------------------------------------------
+   VARIABLES
+----------------------------------------------------- */
+:root {
+    --primary-yellow: #FFC107;
+    --soft-yellow: #FFF8E1;
+    --deep-red: #8B0000;
+    --accent-green: #2E7D32;
+    --white: #ffffff;
+}
+
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background-color: var(--soft-yellow);
+    color: #333;
+}
+
+nav {
+    background-color: var(--deep-red);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--white);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    color: var(--primary-yellow);
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--primary-yellow);
+}
+
+/* -----------------------------------------------------
+   LOGO CIRCLE FIX
+----------------------------------------------------- */
+.logo-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    border: 4px solid #FFC107;
+}
+
+.logo-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.logo-circle:hover {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* -----------------------------------------------------
+   MOVING TAGLINE
+----------------------------------------------------- */
+.tagline-wrapper {
+    width: 100%;
+    overflow: hidden;
+    background-color: var(--deep-red);
+    padding: 8px 0;
+    border-top: 2px solid var(--primary-yellow);
+    border-bottom: 2px solid var(--primary-yellow);
+}
+
+.tagline-marquee {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll-left 10s linear infinite;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-yellow);
+    gap: 4rem;
+    padding-left: 100%;
+}
+
+@keyframes scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+/* -----------------------------------------------------
+   HERO SECTION
+----------------------------------------------------- */
+.hero {
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to bottom right, var(--primary-yellow), var(--soft-yellow));
+    padding: 0 20px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    color: var(--deep-red);
+    margin-bottom: 10px;
+    font-weight: 800;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--accent-green);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.btn {
+    padding: 12px 30px;
+    background-color: var(--deep-red);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: 0.3s;
+    font-size: 1.1rem;
+}
+
+.btn:hover {
+    background-color: var(--accent-green);
+}
+
+/* -----------------------------------------------------
+   FOOTER
+----------------------------------------------------- */
+.custom-footer {
+    background-color: var(--deep-red);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    margin-top: auto;
+    font-size: 1rem;
+    border-top: 3px solid #ffd700; /* gold accent */
+}
+
+.custom-footer a {
+    color: #ffe6b3;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.custom-footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+    letter-spacing: 1px;
+    font-weight: 700;
+    color: #ffd700; /* gold title */
+}
+
+.custom-footer p {
+    margin: 6px 0;
+}
+
+.custom-footer strong {
+    color: #ffdf80; /* soft gold */
+}
+
+.custom-footer .copyright {
+    margin-top: 12px;
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+/* Orders Dispatched Section */
+.dispatch-section {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.dispatch-title {
+    font-size: 28px;
+    color: #8B0000;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Slider container */
+.dispatch-slider {
+    overflow: hidden;
+    width: 100%;
+    background: #FFF8E1;
+    padding: 20px 0;
+    border-top: 2px solid #FFA000;
+    border-bottom: 2px solid #FFA000;
+}
+
+/* Track that moves */
+.slide-track {
+    display: flex;
+    width: calc(250px * 12); /* 6 images × 2 loops */
+    animation: scroll 18s linear infinite;
+}
+
+/* Images */
+.slide-track img {
+    width: 250px;
+    margin: 20px;
+    border-radius: 12px;
+    border: 2px solid #8B0000;
+}
+
+/* Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+/* Custom Oil Orders Section */
+.custom-oil-section {
+    background: #FFF8E1;
+    border-top: 3px solid #FFA000;
+    border-bottom: 3px solid #FFA000;
+    padding: 40px 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.custom-oil-section h2 {
+    font-size: 30px;
+    font-weight: 800;
+    color: #8B0000;
+    margin-bottom: 15px;
+}
+
+.custom-oil-text {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
+    color: #4E2A2A;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #25D366;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.whatsapp-btn:hover {
+    background: #128C7E;
+}
+
+.announce{background:#FFC107;color:#8B0000;text-align:center;padding:.5rem 1rem;font-weight:600}
+@media(max-width:800px){nav{flex-direction:column;gap:.8rem}.nav-links{flex-wrap:wrap;justify-content:center;gap:14px}.logo span{white-space:normal;font-size:1rem}}

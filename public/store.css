@@ -1,0 +1,42 @@
+/* Shop pages (products, cart, thanks, track). Uses variables/nav/footer from base.css */
+.announce{background:var(--primary-yellow);color:var(--deep-red);text-align:center;padding:.5rem 1rem;font-weight:600}
+.page{padding:2rem 5%;flex:1;width:100%;max-width:1100px;margin:0 auto}
+.page h1{color:var(--deep-red);text-align:center;margin-bottom:1.5rem}
+.products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.5rem}
+.product-card{background:#fff;border-radius:12px;padding:1rem;box-shadow:0 4px 10px rgba(0,0,0,.1);text-align:center;display:flex;flex-direction:column;position:relative}
+.product-card img{width:100%;height:210px;object-fit:contain;border-radius:8px}
+.product-card h3{color:var(--deep-red);margin:.6rem 0 .1rem}
+.product-card .size{color:#777;font-size:.9rem}
+.product-card .desc{color:#555;font-size:.88rem;margin:.4rem 0;flex:1}
+.price{font-size:1.25rem;font-weight:700;color:var(--accent-green)}
+.price s{color:#999;font-weight:400;font-size:.95rem;margin-left:6px}
+.badge{position:absolute;top:10px;left:10px;background:var(--deep-red);color:#fff;font-size:.8rem;padding:3px 8px;border-radius:20px;font-weight:600}
+.btn-primary,.product-card button{background:var(--accent-green);color:#fff;border:0;padding:.7rem 1.2rem;border-radius:6px;cursor:pointer;font-size:1rem;margin-top:.6rem}
+.btn-primary:hover,.product-card button:hover{filter:brightness(1.1)}
+button:disabled{background:#aaa!important;cursor:not-allowed}
+.btn-secondary{background:#666;color:#fff;border:0;padding:.7rem 1.2rem;border-radius:6px;cursor:pointer}
+.low{color:#b45309;font-size:.85rem}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#222;color:#fff;padding:.7rem 1.2rem;border-radius:8px;z-index:99;opacity:0;transition:.3s;pointer-events:none}
+.toast.show{opacity:1}
+.cart-layout{display:grid;grid-template-columns:1.2fr 1fr;gap:2rem}
+@media(max-width:800px){.cart-layout{grid-template-columns:1fr}nav{flex-direction:column;gap:.8rem}.logo span{font-size:1rem;white-space:normal}.nav-links{gap:14px;flex-wrap:wrap;justify-content:center}}
+.box{background:#fff;border-radius:12px;padding:1.2rem;box-shadow:0 4px 10px rgba(0,0,0,.08);margin-bottom:1.2rem}
+.box h2{color:var(--deep-red);font-size:1.2rem;margin-bottom:.8rem}
+.line{display:flex;align-items:center;gap:.8rem;padding:.7rem 0;border-bottom:1px solid #eee}
+.line:last-child{border:0}.line .grow{flex:1}
+.qty{display:flex;align-items:center;gap:6px}.qty button{width:28px;height:28px;border-radius:50%;border:1px solid #ccc;background:#fff;cursor:pointer;font-size:1rem}
+.rm{background:none;border:0;color:#b91c1c;cursor:pointer;font-size:1.2rem}
+.sum-row{display:flex;justify-content:space-between;padding:.3rem 0}.sum-row.total{font-weight:700;font-size:1.2rem;border-top:2px solid #eee;margin-top:.4rem;padding-top:.6rem}
+.green{color:var(--accent-green)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}.form-grid .full{grid-column:1/-1}
+input,select,textarea{width:100%;padding:.65rem;border:1px solid #ccc;border-radius:6px;font-size:1rem}
+textarea{resize:vertical;min-height:70px}
+.pay-opt{display:flex;gap:.6rem;align-items:flex-start;padding:.7rem;border:2px solid #eee;border-radius:8px;margin-bottom:.6rem;cursor:pointer}
+.pay-opt input{width:auto;margin-top:4px}.pay-opt:has(input:checked){border-color:var(--accent-green);background:#f1f8f1}
+.coupon-row{display:flex;gap:.5rem;margin-top:.8rem}.coupon-row input{text-transform:uppercase}
+.err{color:#b91c1c;margin:.6rem 0;font-weight:600}
+.center{text-align:center}.tick{font-size:4rem}
+.timeline{display:flex;justify-content:space-between;margin:1.2rem 0;text-align:center;font-size:.85rem}
+.timeline div{flex:1;position:relative;color:#aaa}.timeline div.on{color:var(--accent-green);font-weight:700}
+.timeline div::before{content:'●';display:block;font-size:1.4rem}
+.policy{max-width:800px}.policy h2{color:var(--deep-red);font-size:1.15rem;margin:1.2rem 0 .4rem;text-align:left}.policy p,.policy li{line-height:1.6;color:#333;margin-bottom:.5rem}.policy ul{margin:0 0 .6rem 1.4rem}.policy .upd{text-align:center;color:#888;font-size:.85rem}

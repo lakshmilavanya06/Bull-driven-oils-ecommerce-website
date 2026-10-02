@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Cart - Jai Shri Ram Bull-Driven Oils</title>
+<link rel="stylesheet" href="base.css"><link rel="stylesheet" href="store.css"></head>
+<body>
+<nav><a class="logo" href="/" style="text-decoration:none"><div class="logo-circle"><img src="img/bull.webp" alt="Logo"></div><span>Jai Shri Ram Bull-Driven Oils</span></a><ul class="nav-links"><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="track.html">Track Order</a></li><li><a href="cart.html" class="active">Cart (<span id="cart-count">0</span>)</a></li></ul></nav>
+<section class="page"><h1>Your Cart</h1><div class="cart-layout">
+<div><div class="box"><h2>Items</h2><div id="lines"></div><p id="empty" class="center" style="display:none">Your cart is empty. <a href="products.html">Browse products</a></p>
+<div class="coupon-row"><input id="coupon" placeholder="Coupon code"><button class="btn-secondary" id="apply">Apply</button></div><p id="cmsg"></p></div>
+<div class="box"><h2>Delivery details</h2><div class="form-grid">
+<input id="name" placeholder="Full name" autocomplete="name"><input id="phone" type="tel" placeholder="Mobile number" autocomplete="tel">
+<input class="full" id="email" type="email" placeholder="Email (optional)" autocomplete="email">
+<textarea class="full" id="address" placeholder="Full address (house, street, area)" autocomplete="street-address"></textarea>
+<input id="city" placeholder="City"><input id="pincode" inputmode="numeric" maxlength="6" placeholder="Pincode" autocomplete="postal-code">
+<select class="full" id="state"><option value="">Select state</option><option>Andhra Pradesh</option><option>Arunachal Pradesh</option><option>Assam</option><option>Bihar</option><option>Chhattisgarh</option><option>Goa</option><option>Gujarat</option><option>Haryana</option><option>Himachal Pradesh</option><option>Jharkhand</option><option>Karnataka</option><option>Kerala</option><option>Madhya Pradesh</option><option>Maharashtra</option><option>Manipur</option><option>Meghalaya</option><option>Mizoram</option><option>Nagaland</option><option>Odisha</option><option>Punjab</option><option>Rajasthan</option><option>Sikkim</option><option>Tamil Nadu</option><option>Telangana</option><option>Tripura</option><option>Uttar Pradesh</option><option>Uttarakhand</option><option>West Bengal</option><option>Delhi</option><option>Jammu and Kashmir</option><option>Ladakh</option><option>Puducherry</option><option>Chandigarh</option></select>
+<textarea class="full" id="notes" placeholder="Notes (optional)"></textarea></div>
+<p style="color:#777;margin-top:.6rem;font-size:.9rem">We currently deliver within India.</p></div></div>
+<div><div class="box"><h2>Summary</h2><div id="summary"></div></div>
+<div class="box"><h2>Payment</h2><div id="payopts"></div><p class="err" id="err"></p><p style="font-size:.85rem;color:#666;margin-bottom:.6rem">By placing your order you agree to our <a href="terms.html" target="_blank">Terms</a>, <a href="refund-policy.html" target="_blank">Refund &amp; Cancellation Policy</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>.</p><button class="btn-primary" id="place" style="width:100%">Place order</button></div></div>
+</div></section>
+<footer class="custom-footer"><div class="footer-content">
+<h3 class="footer-title">Jai Shri Ram Bull-Driven Oils</h3>
+<p><strong>Mobile:</strong> <a href="tel:+917095924929">+91 70959 24929</a></p>
+<p><strong>WhatsApp:</strong> <a href="https://wa.me/917095924929" target="_blank" rel="noopener">Chat with us</a></p>
+<p><strong>Email:</strong> <a href="mailto:jaishrirambulldrivenoils@gmail.com">jaishrirambulldrivenoils@gmail.com</a></p>
+<p><strong>Location:</strong> <a href="https://www.google.com/maps/place/Jai+sriram+bull+driven+oils/" target="_blank" rel="noopener">View on Google Maps</a></p>
+<p><a href="terms.html">Terms</a> · <a href="privacy.html">Privacy</a> · <a href="refund-policy.html">Refund &amp; Cancellation</a> · <a href="shipping-policy.html">Shipping</a></p>
+<p class="copyright">&copy; 2026 Jai Shri Ram Bull-Driven Oils</p></div></footer>
+<script src="https://checkout.razorpay.com/v1/checkout.js" defer></script>
+<script src="store.js"></script><script src="cart.js"></script>
+</body></html>

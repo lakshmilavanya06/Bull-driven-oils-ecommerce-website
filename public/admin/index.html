@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin - Jai Shri Ram Oils</title><meta name="robots" content="noindex">
+<style>
+*{box-sizing:border-box;font-family:'Segoe UI',sans-serif}body{margin:0;background:#f5f1e6;color:#222}
+header{background:#8B0000;color:#FFC107;padding:.8rem 1.2rem;display:flex;justify-content:space-between;align-items:center}
+nav{display:flex;gap:.4rem;padding:.6rem 1.2rem;background:#fff;border-bottom:1px solid #ddd;flex-wrap:wrap}
+nav button{border:0;background:none;padding:.5rem .9rem;cursor:pointer;border-radius:6px;font-size:1rem}nav button.on{background:#8B0000;color:#fff}
+main{padding:1.2rem;max-width:1200px;margin:auto}.card{background:#fff;border-radius:10px;padding:1rem;margin-bottom:1rem;box-shadow:0 2px 6px rgba(0,0,0,.08)}
+table{width:100%;border-collapse:collapse;font-size:.92rem}th,td{padding:.5rem;border-bottom:1px solid #eee;text-align:left;vertical-align:top}th{background:#fff8e1}
+input,select,textarea{padding:.45rem;border:1px solid #ccc;border-radius:6px;font-size:.95rem;max-width:100%}td input{width:90px}
+button.b{background:#2E7D32;color:#fff;border:0;padding:.5rem .9rem;border-radius:6px;cursor:pointer}button.r{background:#b91c1c}button.g{background:#666}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}.stat{font-size:1.8rem;font-weight:700;color:#8B0000}
+.row{display:flex;gap:.6rem;flex-wrap:wrap;align-items:center;margin:.5rem 0}.pill{padding:2px 8px;border-radius:12px;font-size:.8rem;background:#eee}.pill.paid,.pill.delivered{background:#c8e6c9}.pill.pending,.pill.new{background:#ffe0b2}.pill.cancelled,.pill.failed{background:#ffcdd2}
+.hide{display:none}.scroll{overflow-x:auto}img.t{width:44px;height:44px;object-fit:contain}#login{max-width:340px;margin:15vh auto}
+</style></head><body>
+<div id="login" class="card"><h2>Admin login</h2><div class="row"><input type="password" id="pw" placeholder="Password" style="width:100%"></div><button class="b" id="lg">Log in</button> <span id="lerr" style="color:#b91c1c"></span></div>
+<div id="app" class="hide">
+<header><strong>Jai Shri Ram Oils · Admin</strong><span><a href="/" style="color:#fff">View store</a> · <button class="b g" id="out">Log out</button></span></header>
+<nav id="tabs"><button data-t="dash" class="on">Dashboard</button><button data-t="orders">Orders</button><button data-t="products">Products &amp; prices</button><button data-t="coupons">Coupons</button><button data-t="settings">Settings</button></nav>
+<main id="view"></main></div>
+<script src="admin.js"></script></body></html>
